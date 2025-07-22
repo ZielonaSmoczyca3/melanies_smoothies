@@ -1,6 +1,6 @@
 # Import python packages
 import streamlit as st
-#from snowflake.snowpark.context import get_active_session
+# from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col as col
 
 
@@ -24,7 +24,7 @@ st.write(
 name_on_order = st.text_input('Personalise your smoothie and choose a name for your drink:')
 st.write('The label on your smoothie will be: ', name_on_order)
 
-cnx = st.connection("Snowflake")
+cnx = st.connection("snowflake")
 session = cnx.session()
 
 #session = get_active_session()
