@@ -42,7 +42,7 @@ if ingredients_list:
         ingredients_string += each_fruit + ' '
         st.subheader(each_fruit + ' Nutrition information:')
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + each_fruit)
-        # st.text(fruityvice_response.json())
+        st.text(fruityvice_response.json())
         sf_df = st.dataframe(fruityvice_response.json(), use_container_width = True)
         #st.write(ingredients_string)
 
